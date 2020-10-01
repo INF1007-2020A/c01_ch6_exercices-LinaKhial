@@ -1,0 +1,53 @@
+test_anagram (__main__.TestExercice) ... ERROR
+test_doubles (__main__.TestExercice) ... ok
+test_grades (__main__.TestExercice) ... FAIL
+test_histogram (__main__.TestExercice) ... FAIL
+test_order (__main__.TestExercice) ... FAIL
+
+======================================================================
+ERROR: test_anagram (__main__.TestExercice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_exercice.py", line 35, in test_anagram
+    output = [exercice.anagrams(v) for v in words]
+  File "test_exercice.py", line 35, in <listcomp>
+    output = [exercice.anagrams(v) for v in words]
+  File "/home/runner/work/c01_ch6_exercices-LinaKhial/c01_ch6_exercices-LinaKhial/exercice.py", line 16, in anagrams
+    return( (len(word1) == len(word2) and (sorted(word2) == sorted(word1)) ) )
+UnboundLocalError: local variable 'word1' referenced before assignment
+
+======================================================================
+FAIL: test_grades (__main__.TestExercice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_exercice.py", line 69, in test_grades
+    'Erreur dans les notes'
+AssertionError: [(100.0, 'Sam')] is not an instance of <class 'dict'> : First argument is not a dictionary
+
+======================================================================
+FAIL: test_histogram (__main__.TestExercice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_exercice.py", line 84, in test_histogram
+    'Erreur dans les histogrammes'
+AssertionError: [({'B': 1, 'o': 4, 'n': 2, 'j': 2, 'u': 2, 'r': 2, ',': 1, 'b': 1}, []), ({'J': 1, "'": 1, 'a': 6, 'd': 1, 'o': 4, 'r': 3, 'e': 7, 'm': 2, 'n': 4, 'b': 1, 'c': 3, 'l': 3, 'u': 2, 't': 2, 'g': 2, 'i': 5, 'f': 1, 'q': 1, '/': 1}, ['a', 'e'])] is not an instance of <class 'dict'> : First argument is not a dictionary
+
+======================================================================
+FAIL: test_order (__main__.TestExercice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_exercice.py", line 25, in test_order
+    'Mauvais ordre'
+AssertionError: Lists differ: [None, None] != [[-2, 1, 6, 9], ['2', 'a', 'hello']]
+
+First differing element 0:
+None
+[-2, 1, 6, 9]
+
+- [None, None]
++ [[-2, 1, 6, 9], ['2', 'a', 'hello']] : Mauvais ordre
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+FAILED (failures=3, errors=1)
